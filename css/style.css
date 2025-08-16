@@ -1,0 +1,197 @@
+:root{
+/* Primary */
+
+--Orange-500: hsl(25, 97%, 53%);
+
+/* Neutral */
+
+--White: hsl(0, 100%, 100%);
+--Grey-500: hsl(217, 12%, 63%);
+--Grey-900: hsl(213, 19%, 18%);
+--Grey-950: hsl(216, 12%, 8%);
+
+--font-family: "Overpass","Open Sans", sans-serif;
+}
+body{
+    background-color:black;
+}
+    .containt{
+        width: 100%;
+            margin: 65px auto;
+        height: 80vh;
+        background-color: var(--Grey-950);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-family);
+    }
+    .containt .main-card{
+        width: 25%;
+        height: 350px;
+        background-image: radial-gradient(circle at bottom, var(--Grey-900) 70%, hsl(217deg 12% 63% / 20%));
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        padding: 25px;
+        position: absolute;
+}
+.main-card .image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: fit-content;
+    margin: 10px;
+}
+.main-card .image::after{
+    content: "";
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    background-color:hsl(217deg 12% 63% / 10%);
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.main-card .image img{
+    position: relative;
+    z-index: 2;
+    width: 15px;
+}
+
+.main-card h1{
+    color: var(--White);
+    margin: 50px 0 10px 0;
+    font-size: 28px;
+}
+
+.main-card p {
+    color: var(--Grey-500);
+    margin: 5px 0 20px 0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.main-card .button{
+    margin: 25px 0 10px 0 ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-card .button button{
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color:hsl(217deg 12% 63% / 10%);
+    cursor: pointer;
+    color: var(--Grey-500);
+    font-size: 20px;
+    font-weight: bold;
+}
+.main-card .button button:focus{
+    background-color: var(--White);
+    color: var(--Grey-950);
+}
+.main-card .button button:hover{
+    color: var(--Grey-950);
+    background-color: var(--Orange-500);
+}
+
+.main-card>button{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    background-color: var(--Orange-500);
+    font-size: 15px;
+    font-weight:bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.main-card>button:hover{
+        background-color: var(--White);
+    color: var(--Grey-950);
+}
+
+
+/* edit final-card */
+.containt .final-card{
+        width: 25%;
+        height: 350px;
+        background-image: radial-gradient(circle at bottom, var(--Grey-900) 70%, hsl(217deg 12% 63% / 20%));
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        padding: 25px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        right: 100%;
+        
+}
+.final-card img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+.final-card span{
+    background-color: hsl(217, 12%, 63% , 10%) ;
+    color:  hsl(25, 97%, 53% , 80%);
+    padding: 5px 20px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.final-card h2{
+    margin-bottom:0 ;
+    color: var(--White);
+    font-size: 28px;
+    opacity: .9;
+}
+
+.final-card p{
+    text-align: center;
+    color: var(--Grey-500);
+    font-size: 14px;
+    line-height: 1.6;
+    
+}
+
+/* media */
+@media(max-width:380px){
+    body{
+        background-color: var(--Grey-950);
+    }
+    .containt{
+        margin: 20px 0 ;
+        height: 100vh;
+    }
+    .containt .main-card , .containt .final-card{
+        width: 80%;
+    }
+}
